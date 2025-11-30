@@ -1,8 +1,40 @@
 {
     "name": "michael-orenda/api-response",
-    "description": "Standardized API response package for Laravel 12+",
+    "description": "A clean, standardized API response formatter for Laravel 10, 11, and 12+. Provides consistent JSON structures, success and error helpers, validation formatting, pagination support, and optional API logging middleware.",
+    "keywords": [
+        "laravel",
+        "api",
+        "response",
+        "json",
+        "api response",
+        "laravel package",
+        "standardized",
+        "middleware",
+        "helper",
+        "api formatter"
+    ],
     "type": "library",
     "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Michael Orenda",
+            "email": "rminchrist@gmail.com",
+            "role": "Software Engineer"
+        }
+    ],
+
+    "homepage": "https://github.com/michael-orenda/api-response",
+    "support": {
+        "issues": "https://github.com/michael-orenda/api-response/issues",
+        "source": "https://github.com/michael-orenda/api-response"
+    },
+
+    "require": {
+        "php": "^8.1|^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0"
+    },
 
     "autoload": {
         "psr-4": {
@@ -18,9 +50,25 @@
             "providers": [
                 "MichaelOrenda\\ApiResponse\\ApiResponseServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-main": "1.0-dev"
         }
     },
 
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=api-response-config --force || true"
+        ]
+    },
+
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/michael-orenda"
+        }
+    ]
 }
