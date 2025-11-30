@@ -1,0 +1,26 @@
+{
+    "name": "michael-orenda/api-response",
+    "description": "Standardized API response package for Laravel 12+",
+    "type": "library",
+    "license": "MIT",
+
+    "autoload": {
+        "psr-4": {
+            "MichaelOrenda\\ApiResponse\\": "src/"
+        },
+        "files": [
+            "src/Helpers/ApiResponseHelper.php"
+        ]
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MichaelOrenda\\ApiResponse\\ApiResponseServiceProvider"
+            ]
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
